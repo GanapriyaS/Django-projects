@@ -1,0 +1,80 @@
+alembic==1.5.8
+argon2-cffi==20.1.0
+async-generator==1.10
+attrs==20.3.0
+backcall==0.2.0
+bleach==3.3.0
+brotlipy==0.7.0
+certifi==2020.12.5
+certipy==0.1.3
+cffi @ file:///tmp/build/80754af9/cffi_1605538068321/work
+chardet @ file:///tmp/build/80754af9/chardet_1605303185383/work
+conda==4.10.1
+conda-package-handling @ file:///tmp/build/80754af9/conda-package-handling_1603018141399/work
+cryptography @ file:///tmp/build/80754af9/cryptography_1605544487601/work
+decorator @ file:///tmp/build/80754af9/decorator_1617916966915/work
+defusedxml==0.7.1
+djangorestframework==3.12.4
+entrypoints==0.3
+filelock==3.0.12
+idna @ file:///tmp/build/80754af9/idna_1593446292537/work
+importlib-metadata @ file:///tmp/build/80754af9/importlib-metadata_1617874469820/work
+ipykernel==5.5.3
+ipython==7.22.0
+ipython-genutils==0.2.0
+ipywidgets==7.6.3
+jedi==0.18.0
+Jinja2 @ file:///tmp/build/80754af9/jinja2_1612213139570/work
+jsonschema==3.2.0
+jupyter==1.0.0
+jupyter-client==6.1.12
+jupyter-console==6.4.0
+jupyter-core==4.7.1
+jupyter-telemetry==0.1.0
+jupyterhub==1.4.0
+jupyterlab-pygments==0.1.2
+jupyterlab-widgets==1.0.0
+MarkupSafe==1.1.1
+mistune==0.8.4
+nbclient==0.5.3
+nbconvert==6.0.7
+nbformat==5.1.3
+nest-asyncio==1.5.1
+notebook==6.3.0
+oauthlib==3.1.0
+packaging==20.9
+pamela==1.0.0
+pandocfilters==1.4.3
+parso==0.8.2
+pexpect==4.8.0
+pickleshare==0.7.5
+prometheus-client==0.10.1
+prompt-toolkit==3.0.18
+ptyprocess==0.7.0
+pycosat==0.6.3
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+Pygments==2.8.1
+pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1605545627475/work
+pyparsing==2.4.7
+pyrsistent==0.17.3
+PySocks @ file:///tmp/build/80754af9/pysocks_1605305779399/work
+python-dateutil @ file:///home/ktietz/src/ci/python-dateutil_1611928101742/work
+python-json-logger==2.0.1
+pyzmq==22.0.3
+qtconsole==5.0.3
+QtPy==1.9.0
+requests @ file:///tmp/build/80754af9/requests_1592841827918/work
+ruamel-yaml==0.15.87
+Send2Trash==1.5.0
+sip==4.19.13
+six @ file:///tmp/build/80754af9/six_1605205327372/work
+terminado==0.9.4
+testpath==0.4.4
+tornado==6.1
+tqdm @ file:///tmp/build/80754af9/tqdm_1605303662894/work
+traitlets==5.0.5
+urllib3 @ file:///tmp/build/80754af9/urllib3_1603305693037/work
+wcwidth==0.2.5
+webencodings==0.5.1
+widgetsnbextension==3.5.1
+zipp @ file:///tmp/build/80754af9/zipp_1615904174917/work

@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Calculator</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Todo App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+ <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'add' %}">Add</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'list' %}">List All Todos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'sortdata' %}">Sort by priorty</a>
+        </li>
+      </ul>
+      <a class="btn btn-light my-2 my-sm-0" href="{% url 'root' %}">Home</a>
+  </div>
+</nav>
+   
+<div class="container-fluid" style="margin-bottom:3rem; ">
+
+  <div class="row">
+    <div class="col-md-6" style="margin:1rem auto 0 auto;">
+      <form action="{% url 'search' %}" method="get">
+        <div class="mb-3">
+          <label for="search" class="form-label">Todo Search</label>
+          <input type="text" class="form-control" id="search" name="search" aria-describedby="emailHelp">
+        </div>
+          <button type="submit" class="btn btn-primary" style="display:block; margin:1rem auto 0 auto;">Search</button>
+      </form>
+    </div>
+ </div>
+
+  <div class="row">
+    <div class="col-md-6" style="margin:1rem auto 0 auto;">
+      {% block title %}
+      {% endblock %}
+      {% block content %}
+     <form action="{% url 'submit' %}">
+      <div class="mb-3">
+        <label for="title" class="form-label">Todo Title</label>
+        <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Todo Description</label>
+        <textarea name="desc" class="form-control" id="desc" rows="3" cols="80"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="num" class="form-label">Todo priority</label>
+        <input type="number" name="num"  class="form-control" id="num" max="100" min="0"></input>
+      </div>
+      <button type="submit" class="btn btn-primary" style="display:block; margin:1rem auto 0 auto;">Add</button>
+    </form>
+    {% endblock %}
+    </div>
+  </div>
+ </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

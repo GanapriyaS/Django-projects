@@ -1,0 +1,19 @@
+{% extends 'todoapp/index.html' %}
+{% block title %}<h1>EDIT TODOS</h1>{% endblock %}
+{% block content %}
+<form action="/todoapp/update/{{id}}">
+ <div class="mb-3">
+   <label for="title" class="form-label">Todo Title</label>
+   <input type="text" class="form-control" id="title" name="title" value={{title}} aria-describedby="emailHelp">
+ </div>
+ <div class="mb-3">
+   <label for="desc" class="form-label">Todo Description</label>
+   <textarea name="desc" class="form-control" id="desc" rows="3" cols="80">{{desc}}</textarea>
+ </div>
+ <div class="mb-3">
+   <label for="num" class="form-label">Todo priority</label>
+   <input type="number" name="num"  class="form-control" id="num" max="100" min="0" value={{num}}></input>
+ </div>
+ <button type="submit" class="btn btn-primary" style="display:block; margin:1rem auto 0 auto;">Update</button>
+</form>
+{% endblock %}

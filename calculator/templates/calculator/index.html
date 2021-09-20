@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Calculator</title>
+  </head>
+  <body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Django Calculator</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#instructions">Instructions</a>
+        </li>
+      </ul>
+    <a class="btn btn-dark my-2 my-sm-0" href="{% url 'root' %}">Home</a>
+  </div>
+</nav>
+   
+<div class="container-fluid" style="margin-bottom:3rem; ">
+{% if error %}
+  <div class="row">
+    <div class="col-md-6" style="margin:1rem auto 0 auto;" >
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+ <strong>Error!!&nbsp&nbsp</strong> Input is not an expression.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+    </div>
+  </div>
+{% endif %}
+{% if result %}
+  <div class="row">
+    <div class="col-md-6" style="margin:1rem auto 0 auto;" >
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+ <strong>{{q}} = {{ans}}</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+</div>
+  </div>
+{% endif %}
+  <div class="row">
+    <div class="col-md-6" style="margin:1rem auto 0 auto;">
+      <div class="card">
+        <img src="{% static '1.jpg' %}" class="card-img-top">
+        <div class="card-body">
+        <form  action="{% url 'calc' %}" method="GET">
+            <input type="text" class="form-control" name="query">
+            <div class="row" style="margin-top:1rem;">
+              <div class="col-6">
+                <button type="submit" class="btn btn-success" style="display:block; margin:0 auto;">submit</button>
+              </div>
+              <div class="col-6">
+                <button type="reset" class="btn btn-danger" style="display:block; margin:0 auto;">Reset</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+        <div class="row">
+          <div class="col-md-6" style="margin:1rem auto 0 auto;">
+            <h3 id="about" name="about"><b>ABOUT</b></h3>
+            <hr>
+            <p class="lead text-center">Our calculator performs mathematical operations and provide optimistic solutions</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6" style="margin:1rem auto 0 auto;">
+           <h3 id="instructions" name="about"><b>INSTRUCTIONS</b></h3>
+            <hr>
+            <ul class="list-group">
+              <li class="list-group-item">+  Addition</li>
+              <li class="list-group-item">-  Subtraction</li>
+              <li class="list-group-item">*  Multiplication</li>
+              <li class="list-group-item">/  Division</li>
+              <li class="list-group-item">// Floor division</li>
+              <li class="list-group-item">() Parenthesis</li>
+              <li class="list-group-item">** Exponential</li>
+              <li class="list-group-item">%  Mod</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
